@@ -16,7 +16,7 @@ h1 {
     padding: 5% 2% 2% 2%;
     border: 1px solid #000000;
 }
-.languages1, .languages2, .languages3 {
+.food1, .food2, .food3 {
    position: absolute;
    top: 0px;
    right: 0px;
@@ -28,13 +28,13 @@ h1 {
    text-align: center;
    border: 1px solid #000000;
 }
-.languages1 {
+.food1 {
     background-color: rgb(82, 1, 82);
 }
-.languages2 {
+.food2 {
     background-color: #08A1F6;
 }
-.languages3 {
+.food3 {
     background-color: rgb(255, 115, 0);
 }
 .text {
