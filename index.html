@@ -76,12 +76,13 @@
   <div id="xs-deliver" class="text-center visible-xs">* We Deliver</div>
   
   
-  <div id="main-content" class="container">
-    
+  <div id="main-content" class="container">    
    <div class="jumbotron">
-      <img src="images/jumbotron_768.jpg" alt="Picture of restaurant" class="img-responsive visible-xs">
+      <img src="jumbotron_768.jpg" alt="Picture of restaurant" class="img-responsive visible-xs">
     </div>
-
+  </div>
+  
+  <div class="container">
     <div id="home-tiles" class="row">
       <div class="col-md-4 col-sm-6 col-xs-12">
         <a href="#" onclick="$dc.loadMenuCategories();"><div id="menu-tile"><span>menu</span></div></a>
@@ -99,20 +100,7 @@
           </div>
         </a>
       </div>
-    </div><!-- End of #home-tiles -->
-  
-  <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-  <a href="#" onclick="$dc.loadMenuItems('{{short_name}}');">
-    <div class="category-tile">
-      <img width="200" height="200" src="menu/{{short_name}}/{{short_name}}.jpg" alt="{{name}}">
-      <span>{{name}}</span>
-    </div>
-  </a>
-</div>
-    
-   <h2 id="menu-categories-title" class="text-center">{{name}} Menu</h2>
-<div class="text-center">{{special_instructions}}</div>    
-
+    </div><!-- End of #home-tiles -->    
   </div>
   
   
