@@ -16,88 +16,91 @@
   </head>
 <body>
   <header>
-    <nav id="header-nav" class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a href="index.html" class="pull-left visible-md visible-lg">
-            <div id="logo-img"><img src="restaurant-logo_large.png"  alt="Logo image"></div>
-          </a>
+    <nav id="header-nav" class="navbar navbar-expand-md">
+      <div class="container">
 
-          <div class="navbar-brand">
+        <!-- Do not use div to make inline display for nav & home-tiles -->
+          <a class="navbar-header" href="index.html" class="d-sm-none d-md-block">
+            <div id="logo-img" alt="Logo image"></div>
+          </a>  
+
+           <div class="navbar-brand">
             <a href="index.html"><h1>David Chu's China Bistro</h1></a>
-            <p>
-              <img src="star-k-logo.png" alt="Kosher certification">
-              <span>Kosher Certified</span>
-            </p>
-          </div>
-           
-          <button class="navbar-toggler text-body" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" 
-                  aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-          </button> 
-        </div><!--navbar-header -->
-          <!-- <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button> -->
-        
-        
-        <div id="collapsable-nav" class="collapse navbar-collapse">
-           <ul id="nav-list" class="nav navbar-nav navbar-right">
-            <li id="navHomeButton" class="visible-xs active">
-              <a href="index.html">
-                <span class="glyphicon glyphicon-home"></span> Home</a>
+            <p id="star-img" alt="Kosher certification"><span>Kosher Certified</span></p>
+           </div>
+
+        <button id="navbarToggle" class="navbar-toggler text-body bg-success" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" 
+        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+        </button> 
+      
+
+        <div id="collapsable-nav" class="collapse navbar-collapse justify-content-end">
+           <ul id="nav-list" class="navbar-nav">
+            <li id="navHomeButton" class="nav-item d-block d-sm-none"> <!-- visible only xs size -->
+              <a class="nav-link" href="index.html">
+                <img src="home-img.png" alt="home"> Home</a>
             </li>
-            <li id="navMenuButton">
-              <a href="#" onclick="$dc.loadMenuCategories();">
-                <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
+            <li id="navMenuButton" class="nav-item">
+              <a class="nav-link" href="#" onclick="$dc.loadMenuCategories();">
+                <img src="menu-img.png" alt="menu">Menu</a>
             </li>
-            <li>
-              <a href="#">
-                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="about-img.png" alt="about">About</a>
             </li>
-            <li>
-              <a href="#">
-                <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Awards</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="award-img.png" alt="awards">Awards</a>
             </li>
-            <li id="phone" class="hidden-xs">
-              <a href="tel:410-602-5008">
+            <li id="phone" class="nav-item">
+              <a class="nav-link" href="tel:410-602-5008">
                 <span>410-602-5008</span></a><div>* We Deliver</div>
             </li>
           </ul><!-- #nav-list -->
-        </div><!-- .collapse .navbar-collapse -->
+        </div><!-- .collapse .navbar-collapse -->      
       </div><!-- .container -->
     </nav><!-- #header-nav -->
+    
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4">
+        <h5 class="text-white text-center h6"><i class="bi bi-house-door"></i>HOME</h5><hr>
+        <h5 class="text-white text-center h6"><i class="bi bi-apple"></i>MENU</h5><hr>
+        <h5 class="text-white text-center h6"><i class="bi bi-file-person"></i>ABOUT</h5><hr>
+        <h5 class="text-white text-center h6"><i class="bi bi-award"></i>AWARDS</h5>        
+      </div>
+    
   </header>
 
-  <!-- <div id="call-btn" class="visible-xs">
+  <div id="call-btn" class="d-block d-sm-block d-md-none">
     <a class="btn" href="tel:410-602-5008">
-    <span class="glyphicon glyphicon-earphone"></span>
+      <i class="bi bi-telephone-fill"></i>
     410-602-5008
     </a>
   </div>
-  <div id="xs-deliver" class="text-center visible-xs">* We Deliver</div> -->
+  <div id="xs-deliver" class="text-center d-block d-sm-block d-md-none">* We Deliver</div> 
   
-  
+  <!-- MAIN CONTENTS -->
   <div id="main-content" class="container">    
-   <div>
-      <img src="jumbotron_1200.jpg" alt="Picture of restaurant" width="1200" class="img-responsive visible-xs">
+   <div class="image">
+      <img src="jumbotron_1200.jpg" alt="Picture of restaurant" class="mx-auto d-block" style="width:100%;">
     </div>
   </div>
   
   <div class="container">
     <div id="home-tiles" class="row">
-      <div class="col-md-4 col-sm-6 col-xs-12">
+
+      <div class="col-lg-4 col-md-6 col-sm-12 col-12">
         <a href="#" onclick="$dc.loadMenuCategories();"><div id="menu-tile"><span>menu</span></div></a>
       </div>
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="#" onclick="$dc.loadMenuItems({{randomCategoryShortName}});">
+
+      <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+        <a href="#" onclick="$dc.loadMenuItems({specialMenu});">
           <div id="specials-tile"><span>specials</span></div>
         </a>
       </div>
-      <div class="col-md-4 col-sm-12 col-xs-12">
+
+      <div class="col-lg-4 col-md-12 col-sm-12 col-12">
         <a href="https://www.google.com/maps/place/David+Chu's+China+Bistro/@39.3635874,-76.7138622,17z/data=!4m6!1m3!3m2!1s0x89c81a14e7817803:0xab20a0e99daa17ea!2sDavid+Chu's+China+Bistro!3m1!1s0x89c81a14e7817803:0xab20a0e99daa17ea" target="_blank">
           <div id="map-tile">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.675372390488!2d-76.71386218529199!3d39.3635874269356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81a14e7817803%3A0xab20a0e99daa17ea!2sDavid+Chu&#39;s+China+Bistro!5e0!3m2!1sen!2sus!4v1452824864156" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -105,6 +108,7 @@
           </div>
         </a>
       </div>
+
     </div><!-- End of #home-tiles -->    
   </div>
   
@@ -117,14 +121,14 @@
           Sun-Thurs: 11:15am - 10:00pm<br>
           Fri: 11:15am - 2:30pm<br>
           Saturday Closed
-          <hr class="visible-xs">
+          <!-- <hr class="visible-xs"> -->
         </section>
         <section id="address" class="col-sm-4">
           <span>Address:</span><br>
           7105 Reisterstown Road<br>
           Baltimore, MD 21215
           <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
-          <hr class="visible-xs">
+         <!-- <hr class="visible-xs"> -->
         </section>
         <section id="testimonials" class="col-sm-4">
           <p>"The best Chinese restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
@@ -138,7 +142,14 @@
   <!-- jQuery (Bootstrap JS plugins depend on it)-->
    <script src="jquery-2.1.4.min.js"></script>
    <script src="bootstrap.min.js"></script> 
-  <script src="ajax-utils.js"></script>
+   <script src="npm.js"></script>
   <script src="script.js"></script> 
+  <script src="ajax-utils.js"></script>
 </body>
-</html>
+</html>      
+            
+    
+     
+ 
+        
+  
