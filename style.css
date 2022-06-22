@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   font-size: 16px;
   color: #fff;
@@ -97,6 +100,7 @@ body {
 }*/
 
 #navbarToggleExternalContent i { margin-right: 10px;}
+#navbarToggleExternalContent h5:hover { font-size: 1.2em; }
 hr { color: #ffffff; }
 .navbar-toggler-icon i { font-size: 1.5em; }
 /* END HEADER */
@@ -142,7 +146,7 @@ hr { color: #ffffff; }
 }
 /* END HOME PAGE */
 
-/* MENU CATEGORIES PAGE */
+/* MENU CATEGORIES PAGE 
 .category-tile { 
   position: relative;
   border: 2px solid #3F0C1F;
@@ -173,32 +177,23 @@ hr { color: #ffffff; }
 /* END MENU CATEGORIES PAGE */
 
 /* SINGLE CATEGORY PAGE */
-.menu-item-tile {
-  margin-bottom: 25px;
-}
+
 .menu-item-tile hr {
-  width: 80%;
+  width: 100%;
 }
-.menu-item-tile .menu-item-price {
-  font-size: 1.1em;
-  text-align: right;
-  margin-top: -15px;
-  margin-right: -15px;
-}
-.menu-item-tile .menu-item-price span {
-  font-size: .6em;
-}
+ .menu-item-price {
+  font-size: 0.8em;
+ }
 .menu-item-photo {
   position: relative;
   border: 2px solid #3F0C1F; 
-  overflow: hidden;
+  overflow: hidden; 
   padding: 0;
-  margin-right: -15px;
-  margin-left: auto;
-  margin-bottom: 20px;
-  max-width: 250px;
-}
-.menu-item-photo div {
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 5px;
+} 
+.menu-item-photo span { /* sp */
   position: absolute;
   bottom: 0;
   right: 0;
@@ -207,15 +202,18 @@ hr { color: #ffffff; }
   text-align: center;
 }
 .menu-item-description {
-  padding-right: 30px;
+  margin: -160px -10px 0 0;
+  padding-right: 20px;
 }
 h3.menu-item-title {
+  font-size: 1.2em;
   margin: 0 0 10px;
 }
 .menu-item-details {
-  font-size: .9em;
+  font-size: 0.8em;
   font-style: italic;
 }
+
 /* END SINGLE CATEGORY PAGE */
 
 /* FOOTER */
@@ -252,10 +250,19 @@ h3.menu-item-title {
 
 /********** Large devices only **********/
 @media (min-width: 992px) {
-  .container img {
+  #main-content img {
     background: url('m_jumbotron_1200.jpg') no-repeat;
     height: 675px;
   }
+/* special menu */
+.menu-item-description {
+  margin: -140px -10px 0 0;
+  padding-right: 20px;
+ }
+.menu-item-tile hr {
+  width: 100%;
+  margin-bottom: 30px;
+ }
 }
 
 /********** Medium devices only **********/
@@ -270,12 +277,21 @@ h3.menu-item-title {
   /* End Header */
 
   /* Home Page */
-  .container img {
+  #main-content img {
     background: url('m_jumbotron_992.jpg') no-repeat;
     height: 558px;
   }
   #home-tiles { margin-top: 20px;}
   /* End Home Page */
+
+/*special menu */
+.menu-item-description {
+  margin: -145px -10px 0 0;
+  padding-right: 20px;
+ }
+.col-sm-5 {
+  width: 36%;
+ }
 }
 
 /********** Small devices only **********/
@@ -301,7 +317,7 @@ h3.menu-item-title {
     text-transform: uppercase;
   }
   /* Home Page */
-  .container img {
+  #main-content img {
     background: url('m_jumbotron_768.jpg') no-repeat;
     height: 432px;
   }
@@ -309,7 +325,6 @@ h3.menu-item-title {
     width: 350px;
     margin: 15px auto 15px;
   }
-
   /* End Home Page */
 }
 
@@ -350,7 +365,20 @@ h3.menu-item-title {
     text-transform: uppercase;
   }
   /* End Header */
-
+  /* special menu */
+  .col-sm-5 { /* photo */
+    width: 40%;
+    margin: auto; /* align : center => margin & display */
+    display: block;
+  }
+  .col-sm-7 { /* description */
+    width: 100%;
+    padding: 20px;
+  }
+  .menu-item-description { /* collapse photo & description */
+    margin: 0;
+    padding: 0px;
+  }
   /* Footer */
   .panel-footer section {
     margin-bottom: 30px;
@@ -410,18 +438,3 @@ h3.menu-item-title {
     width: 100%;
   }
 }
-
-
- 
-  
-
-
-  
-
-
-
-  
-  
-  
-   
-
